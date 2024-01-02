@@ -17,3 +17,7 @@ models:
         description: "The amount of material moved through the resource on the given day. Note that this is tracked in the primary UOM which effectively makes this table useless for any resource which operates in multiple UOMs."
         tests:
           - not_null
+
+tests:
+  - name: check_yield_over_100
+    description: "Check that the yield is not over 100% on any record in the yield reports"
