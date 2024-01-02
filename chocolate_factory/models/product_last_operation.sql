@@ -6,6 +6,6 @@ from
             operation_name,
             sequence,
             rank() over (partition by product_id order by sequence desc) as rank
-        from erp_routes
+        from {{ source("chocolate-factory", "erp_routes") }}
     ) as a
 where a.rank = 1

@@ -21,3 +21,17 @@ models:
 tests:
   - name: check_yield_over_100
     description: "Check that the yield is not over 100% on any record in the yield reports"
+
+sources:
+  - name: chocolate-factory
+    database: chocolate-factory
+    schema: public
+    tables:
+      - name: mes_resources
+      - name: mes_complete_logs
+      - name: mes_scrap_logs
+      - name: erp_work_orders
+      - name: erp_products
+      - name: erp_routes
+      - name: mes_operations
+
